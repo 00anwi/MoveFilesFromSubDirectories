@@ -99,7 +99,9 @@ namespace WinFormsTestApp
             this.Controls.Add(this.BTN_Run);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TB_SourceDirectory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Flytta Filer App";
             this.ResumeLayout(false);
             this.PerformLayout();
