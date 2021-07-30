@@ -44,7 +44,7 @@ namespace WinFormsTestApp
             foreach (var directory in subDirectorys)
             {
                 var files = Directory.GetFiles(directory);
-                if (files.Length == 1)
+                if (files.Length == 1 && new FileInfo(files[0]).Length > 1000)
                 {
                     var moveDestination = Path.Combine(moveDirectory, new DirectoryInfo(System.IO.Path.GetDirectoryName(files[0])).Name + Path.GetExtension(files[0]));
                     LBL_CurrentFileProgress.Text = $"{Path.GetFileName(moveDestination)}";
